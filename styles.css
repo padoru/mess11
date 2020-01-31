@@ -1,0 +1,99 @@
+body {
+	background-color: #000;
+}
+
+img.logo {
+	opacity: 0;
+}
+
+div {
+	width: 700px;
+	height: 700px;
+	margin: 200px auto 0;
+	position: relative;	
+}
+
+ul {
+	position: absolute;
+	top: 200px;
+	left: 300px;
+}
+img.logo, img.logo-off {
+	position: absolute;
+	top: -70px;
+	left: -80px;
+	border: none;
+}
+
+a.icon {
+	width: 100px;
+	height: 100px;
+}
+
+
+a.icon img {
+	width: 100px;
+	height: 100px;
+	border: none;
+}
+
+
+a:visited {
+	border: none;
+}
+
+li p {
+	position: absolute;
+	opacity: 0;
+	width: 200px;
+	display: block;
+	line-height: 18px;
+	top: 120px;
+	left: -55px;
+	text-align: center;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.font {
+    font-family: Helvetica;
+    font-size: 21px;
+}
+
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    font-size: 24px;
+    padding: 25px;
+}
+
+.parallax {
+    background: transparent;
+    min-height: 750px;
+}
+
+
+/* 
+<li style="display: block; width: 100px; height: 100px; text-align: center; line-height: 100px; position: absolute; z-index: 1; top: 0px; left: 0px; border-radius: 100px; transform: scale(0.5); transition: all 1000ms ease-in-out 0s;">
+        <a href="https://www.facebook.com/TallyHall" target="_blank" class="icon"><img width="150" height="150" src="https://www.tallyhall.com/wp-content/uploads/2013/04/facebook.png" class="attachment-post-thumbnail wp-post-image" alt="facebook" style="position: absolute; display: inline-block; width: 100px; height: 100px; top: 0px; left: 0px;">
+        </a>
+        <p style="opacity: 0;">FACEBOOK</p>
+    </li>
+    <li style="display: block; width: 100px; height: 100px; text-align: center; line-height: 100px; position: absolute; z-index: 1; top: 0px; left: 0px; border-radius: 100px; transform: scale(0.5); transition: all 1000ms ease-in-out 0s;">
+        <a href="https://twitter.com/tallyhall" target="_blank" class="icon">
+            <img width="150" height="150" src="https://www.tallyhall.com/wp-content/uploads/2013/04/twitter.png" class="attachment-post-thumbnail wp-post-image" alt="twitter" style="position: absolute; display: inline-block; width: 100px; height: 100px; top: 0px; left: 0px;">
+        </a>
+        <p style="opacity: 0;">TWITTER</p>
+    </li>
+    <li style="display: block; width: 100px; height: 100px; text-align: center; line-height: 100px; position: absolute; z-index: 1; top: 0px; left: 0px; border-radius: 100px; transform: scale(0.5); transition: all 1000ms ease-in-out 0s;">
+        <a href="http://vimeo.com/tallyhall/videos" target="_blank" class="icon">
+            <img width="300" height="300" src="https://www.tallyhall.com/wp-content/uploads/2013/04/THIS.png" class="attachment-post-thumbnail wp-post-image" alt="THIS"></a><p>T.H.I.S. (2008)</p></li><li style="display: block; width: 100px; height: 100px; text-align: center; line-height: 100px; position: absolute; z-index: 1; top: 0px; left: 0px; border-radius: 100px; transform: scale(0.5); transition: all 1000ms ease-in-out 0s;">
+        <a href="mailto:band@tallyhall.com" target="_blank" class="icon">
+         <img width="150" height="150" src="https://www.tallyhall.com/wp-content/uploads/2013/04/tallymail1.png" class="attachment-post-thumbnail wp-post-image" alt="tallymail" style="position: absolute; display: inline-block; width: 100px; height: 100px; top: 0px; left: 0px;">
+                </a>
+                <p style="opacity: 0;">TALLY-MAIL</p>
+            </li>
+/*

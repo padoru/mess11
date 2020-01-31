@@ -1,0 +1,108 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Protected Property</title>
+    
+    <link rel="stylesheet" href="js/styles.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="js/bootstrap.min.css" type="text/css">
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+     <script src="https://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="js/jQuery.circleMenu.js" type="text/javascript"></script>
+    <script src="js/parallax.js-1.5.0/parallax.min.js"></script>
+    <script>
+    
+    
+    $(document).ready(function() {
+        
+        $('ul').circleMenu({ 
+            item_diameter: 100, 
+            circle_radius: 260, 
+            'transition_function':'ease-in-out',
+            speed: 1000,
+            step_in:80,
+            step_out:40,
+            delay: 5000,
+            direction: 'full' 
+        });
+    
+        $('a.icon img').mouseover(function(){
+            $(this).css("position", "relative");
+            $(this).animate({ width: '150px', height: '150px', top: "-=30px", left: "-=30px"}, 100);
+            $(this).parent().parent().children('p').animate({ opacity: 1 }, 100);
+           
+        });
+        $('a.icon img').mouseout(function(){
+            $(this).css("position", "absolute");
+           $(this).delay(10).animate({ width: '100px', height: '100px', top: "+=30px", left: "+=30px"}, 100);
+            $(this).parent().parent().children('p').animate({ opacity: 0 }, 100);
+        });
+        
+        
+        $('ul').on('circleMenu-open',function(){
+            $('body').animate({backgroundColor: '#fff'}, 500);
+            $('img.logo-off').animate({ opacity: 0 }, 500);
+            $('img.logo').animate({ opacity: 1 }, 500);
+        });
+        
+        $('ul').on('circleMenu-close',function(){
+            $('body').delay(300).animate({backgroundColor: '#000'}, 1000);
+            $('img.logo').delay(300).animate({ opacity: 0 }, 1000);
+            $('img.logo-off').delay(300).animate({ opacity: 1 }, 1000);
+        });
+        
+        $('ul').on('circleMenu-select',function(evt,item){
+            $('body').animate({backgroundColor: '#000'}, 500);
+            $('img.logo').animate({ opacity: 0 }, 500);
+            $('img.logo-off').animate({ opacity: 1 }, 500);
+            window.setTimeout('location.reload()', 1000);
+            var href = $('li a').attr('href');
+    
+               
+            });
+            
+            
+    });
+    </script>
+    </head>
+    
+    <body id="color" style="zoom: 1; background-color: rgb(0, 0, 0);">
+    <div>
+    <ul class="circleMenu-closed" style="list-style: none; margin: 0px; padding: 0px; width: 100px;"> 
+        <li style="display: block; width: 100px; height: 100px; text-align: center; line-height: 100px; position: absolute; z-index: 1000; border-radius: 100px; transition: all 1000ms ease-in-out 0s;">
+            <a href="#">
+                <img src="images/logo-off.png" class="logo-off" style="opacity: 1;">
+                <img src="images/logo.png" class="logo" style="opacity: 0;">
+            </a>
+        </li> 
+         <!-- The loop starts Here -->
+        
+    <li style="display: block; width: 100px; height: 100px; text-align: center; line-height: 100px; position: absolute; z-index: 1; top: 0px; left: 0px; border-radius: 100px; transform: scale(0.5); transition: all 1000ms ease-in-out 0s;">
+        <a href="https://piv.pivpiv.dk/" target="_blank" class="icon">
+            <img width="150" height="150" src="images/yaai.png" class="attachment-post-thumbnail wp-post-image" alt="You are an idiot.">
+        </a>
+        <p>You are an idiot.</p>
+    </li>
+    <li style="display: block; width: 100px; height: 100px; text-align: center; line-height: 100px; position: absolute; z-index: 1; top: 0px; left: 0px; border-radius: 100px; transform: scale(0.5); transition: all 1000ms ease-in-out 0s;">
+        <a href="http://www.nooooooooooooooo.com/" target="_blank" class="icon">
+            <img width="150" height="150" src="images/vader.png" class="attachment-post-thumbnail wp-post-image" alt="nooooooooooooooo &amp; !!!!" style="position: absolute; display: inline-block; width: 100px; height: 100px; top: 0px; left: 0px;">
+        </a><p style="opacity: 0;">nooooooooooooooo  !!!</p>
+    </li>
+    <li style="display: block; width: 100px; height: 100px; text-align: center; line-height: 100px; position: absolute; z-index: 1; top: 0px; left: 0px; border-radius: 100px; transform: scale(0.5); transition: all 1000ms ease-in-out 0s;">
+        <a href="https://en.wikipedia.org/wiki/Truncatable_prime" target="_blank" class="icon">
+            <img width="300" height="300" src="images/lefttnum.png" class="attachment-post-thumbnail wp-post-image" alt="?" style="position: absolute; display: inline-block; width: 100px; height: 100px; top: 0px; left: 0px;">
+        </a><p style="opacity: 0;">Truncatable Numbers</p>
+    </li>
+    
+    </ul>
+    </div>
+    <div class="container">
+        <p class="circleMenu-closed">What do you need here exactly?</p>
+        <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/parallax11.png"></div>
+        <div class="parallax">
+
+        </div>
+    </div>
+    
+    
+    </body></html>
